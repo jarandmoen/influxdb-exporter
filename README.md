@@ -2,7 +2,7 @@
 
 This script facilitates the extraction of time series data from InfluxDB, allowing for data output in either JSON or CSV format. It provides options to specify the date range for the data extraction, the desired output format, and whether the data should be chunked into hourly intervals.
 
-This script only exports measurements inside a database, as defined as an argument.
+NOTE: This script only exports measurements inside a database, as defined as an argument.
 
 ## Features include
 - Command-line arguments for setting up database parameters and data extraction specifics.
