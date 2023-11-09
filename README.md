@@ -7,8 +7,7 @@ This script only exports measurements inside a database, as defined as an argume
 
 Features include:
 - Command-line arguments for setting up database parameters and data extraction specifics.
-- Validation of date inputs.
-- Option to export data in hourly chunks or daily aggregates.
+- Option to export data in hourly or daily chunks.
 - Ability to choose between JSON or CSV output formats.
 - Checking for existing files to prevent overwriting.
 - Error messaging for empty data sets or file existence.
