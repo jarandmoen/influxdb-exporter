@@ -20,11 +20,11 @@ This will install the influxdb client library needed to interact with the Influx
 ## Usage
 To use the script, you can provide the necessary information as command-line arguments. Here is an example command:
 
-python3 InfluxDB-Exporter.py --database mydatabase --measurement mymeasurement --start 2021-01-01 --end 2021-01-02 --output-format=json
+```python3 InfluxDB-Exporter.py --database mydatabase --measurement mymeasurement --start 2021-01-01 --end 2021-01-02 --output-format=json```
 
 You can also include optional arguments for hourly exports, InfluxDB host, port, username, and password:
 
-python3 InfluxDB-Exporter.py --database mydatabase --measurement mymeasurement --start 2021-01-01 --end 2021-01-02 --output-format json --hourly --host localhost --port 8086 --username myuser --password mypassword
+```python3 InfluxDB-Exporter.py --database mydatabase --measurement mymeasurement --start 2021-01-01 --end 2021-01-02 --output-format=csv --hourly --host localhost --port 8086 --username myuser --password mypassword```
 
 Replace mydatabase, mymeasurement, myuser, and mypassword with your actual database name, measurement name, username, and password respectively.
 
