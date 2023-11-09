@@ -40,6 +40,8 @@ parser.add_argument('--hourly', action='store_true', help='Export data in hourly
 parser.add_argument('--host', default='localhost', help='The InfluxDB host to connect to (default: localhost)')
 parser.add_argument('--port', default=8086, type=int, help='The InfluxDB port to connect to (default: 8086)')
 parser.add_argument('--output-format', default='json', choices=['json', 'csv'], help='The output format of the data (default: json)')
+parser.add_argument('--username', default='', help='The InfluxDB username (optional)')
+parser.add_argument('--password', default='', help='The InfluxDB password (optional)')
 
 args = parser.parse_args()
 
@@ -52,7 +54,12 @@ except ValueError:
     exit(1)
 
 # Setup InfluxDB connection
-client = InfluxDBClient(host=args.host, port=args.port)
+client = InfluxDBClient(
+    host=args.host,
+    port=args.port,
+    username=args.username if args.username else None,
+    password=args.password if args.password else None
+)
 client.switch_database(args.database)
 
 # Function to fetch and save data
